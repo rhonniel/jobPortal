@@ -25,8 +25,8 @@ public class Users {
     private Date registrationDate;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
-    private UsersType usersType;
+    @JoinColumn(name = "user_type_id", referencedColumnName = "userTypeId")
+    private UsersType userType;
 
     public Users() {
     }
@@ -37,7 +37,7 @@ public class Users {
         this.password = password;
         this.isActive = isActive;
         this.registrationDate = registrationDate;
-        this.usersType = usersType;
+        this.userType = usersType;
     }
 
     public int getUserId() {
@@ -80,12 +80,12 @@ public class Users {
         this.registrationDate = registrationDate;
     }
 
-    public UsersType getUsersType() {
-        return usersType;
+    public UsersType getUserType() {
+        return userType;
     }
 
-    public void setUsersType(UsersType usersType) {
-        this.usersType = usersType;
+    public void setUserType(UsersType usersType) {
+        this.userType = usersType;
     }
 
     @Override
@@ -96,7 +96,7 @@ public class Users {
                 ", password='" + password + '\'' +
                 ", isActive=" + isActive +
                 ", registrationDate=" + registrationDate +
-                ", usersType=" + usersType +
+                ", usersType=" + userType +
                 '}';
     }
 }
