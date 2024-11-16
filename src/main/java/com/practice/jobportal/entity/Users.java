@@ -11,7 +11,7 @@ import java.util.Date;
 public class Users {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  //Todo cual es la diferencia de usar AUTO en el identity cuando se usa asi da error al intentar usar secuencia al menos en mysql
     private int userId;
 
     @Column(unique = true)
