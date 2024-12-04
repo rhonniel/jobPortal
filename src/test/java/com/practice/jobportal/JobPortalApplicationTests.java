@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-class JobportalApplicationTests {
+class JobPortalApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -26,7 +26,8 @@ public class JobPostActivity {
 
     @Transient
     private Boolean isSaved;
-
+    @Transient
+    private boolean isActive;
     @Length(max = 10000)
     private String jobType;
     private String salary;
@@ -97,11 +98,11 @@ public class JobPostActivity {
         this.jobCompanyId = jobCompanyId;
     }
 
-    public Boolean getSaved() {
+    public Boolean getIsSaved() {
         return isSaved;
     }
 
-    public void setSaved(Boolean saved) {
+    public void setIsSaved(Boolean saved) {
         isSaved = saved;
     }
 
@@ -143,6 +144,14 @@ public class JobPostActivity {
 
     public void setJobTitle(String jobTitle) {
         JobTitle = jobTitle;
+    }
+
+    public boolean getIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(boolean active) {
+        isActive = active;
     }
 
     @Override
