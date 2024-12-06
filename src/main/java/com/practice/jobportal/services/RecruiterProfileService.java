@@ -19,12 +19,13 @@ public class RecruiterProfileService {
     private final RecruiterProfileRepository recruiterProfileRepository;
     private final UsersRepository usersRepository;
 
+    @Autowired
     public RecruiterProfileService(RecruiterProfileRepository recruiterProfileRepository, UsersRepository usersRepository) {
         this.recruiterProfileRepository = recruiterProfileRepository;
         this.usersRepository = usersRepository;
     }
 
-    @Autowired
+
 
     public Optional<RecruiterProfile> getOne(Integer id){
         return recruiterProfileRepository.findById(id);

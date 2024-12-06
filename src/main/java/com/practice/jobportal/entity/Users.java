@@ -12,7 +12,7 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)  //Todo cual es la diferencia de usar AUTO en el identity cuando se usa asi da error al intentar usar secuencia al menos en mysql
-    private int userId;
+    private Integer userId;
 
     @Column(unique = true)
     private String email;
@@ -40,11 +40,11 @@ public class Users {
         this.userType = usersType;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
